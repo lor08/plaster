@@ -1,0 +1,206 @@
+.type-main {
+
+  .section {
+
+    &.section-news {
+      background: #20286d;
+      padding: 16px 0 20px;
+
+      .container {
+        max-width: 1500px;
+      }
+
+      .section__wrapper {
+        display: flex;
+        margin: 0 -15px -20px;
+
+        .section__item {
+          margin: 0 15px 20px;
+          width: 360px;
+          flex: 0 0 auto;
+          position: relative;
+
+          .bg-item {
+            position: absolute;
+            height: calc(100% + 36px);
+            top: -16px;
+            right: -18%;
+            display: flex;
+            justify-content: flex-end;
+            width: 210%;
+          }
+
+          .link {
+            font-size: 18px;
+            font-weight: 300;
+            color: rgba(255,2552,255,.5);
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background: rgba(255,255,255,.5);
+            }
+          }
+
+          .section__logo {
+            display: block;
+            margin-top: 30px;
+            text-align: right;
+            position: relative;
+            z-index: 1;
+          }
+
+          .section__title {
+            position: relative;
+            z-index: 1;
+            .h2 {
+              font-size: 53px;
+              text-transform: uppercase;
+              font-weight: 900;
+              color: #ecedee;
+            }
+          }
+        }
+      }
+
+      .news-block {
+        margin: 0 15px 20px;
+
+        .news__wrapper {
+          display: flex;
+          flex-wrap: wrap;
+        }
+
+        .news__item {
+          width: 33.3333%;
+          padding: 0 40px 0 15px;
+          border-left: 1px #717a7e solid;
+          transition: .2s;
+
+          &:nth-child(2) {
+            opacity: .75;
+          }
+
+          &:nth-child(3) {
+            opacity: .5;
+          }
+
+          &:hover {
+            opacity: 1;
+          }
+
+          .item__title {
+            display: flex;
+            margin-bottom: 18px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .icon {
+              margin-right: 12px;
+            }
+
+            .text {
+              font-size: 18px;
+            }
+          }
+
+          .item__content {
+            margin-bottom: 18px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            .text {
+              font-weight: 500;
+            }
+          }
+
+          .item__info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .author {
+              .text {
+                font-size: 14px;
+                font-weight: 300;
+              }
+            }
+
+            .stat {
+              display: flex;
+
+              &__item {
+                display: flex;
+                align-items: center;
+
+                &:after {
+                  content: '·';
+                  margin: 0 4px;
+                }
+
+                &:last-child {
+                  &:after {
+                    display: none;
+                  }
+                }
+
+                .icon {
+                  margin-right: 4px;
+                }
+
+                .count {
+                  font-size: 14px;
+                  font-weight: 300;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.section-trust {
+      padding: 60px 0 100px;
+
+      .container {
+        max-width: 1415px;
+      }
+
+      .section__title {
+        margin-left: 18%;
+        margin-bottom: 55px;
+        padding-bottom: 10px;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          width: 70px;
+          height: 4px;
+          background: $primaryColor;
+          left: 0;
+          bottom: 0;
+        }
+
+        .h2 {
+          color: $primaryColor;
+          font-size: 30px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
