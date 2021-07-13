@@ -26,6 +26,9 @@ h1, .h1 {
 }
 
 h2, .h2 {
+  font-size: 30px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 h3, .h3 {
@@ -48,10 +51,11 @@ p {
   }
 }
 
-a {
+a, button {
   text-decoration: none;
   transition: .2s;
   color: inherit;
+  cursor: pointer;
 }
 
 img {

@@ -1,0 +1,17 @@
+.input {
+
+  &.input-red-bg {
+    background: url("../img/input-red-bg.jpg") center center no-repeat;
+    background-size: cover;
+  }
+
+  &.input-blue-bg {
+    background: url('../img/input-blue-bg.jpg') center center no-repeat;
+    background-size: cover;
+  }
+
+  &.input-light-green-bg {
+    background: url('../img/input-light-green-bg.jpg') center center no-repeat;
+    background-size: cover;
+  }
+}

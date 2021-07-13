@@ -1,0 +1,77 @@
+.form {
+
+  &.form-callback {
+    width: 100%;
+    max-width: 440px;
+
+    .input__fluid {
+      margin-bottom: 40px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-wrapper {
+        margin-bottom: 40px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      
+      .input {
+        height: 80px;
+        width: 100%;
+        padding: 0 50px;
+        border: none;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+
+        &::placeholder {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .form__button {
+      .input {
+        height: 80px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        padding: 0 65px;
+        border: none;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+    }
+  }
+
+  &.form-search-shop {
+    .select {
+      width: 100%;
+      height: 44px;
+      background: #20286d;
+      color: #fff;
+      font-size: 14px;
+      padding: 0 40px;
+      appearance: none;
+
+      &-wrapper {
+        position: relative;
+
+        &:before {
+          content: url("../img/main/location/arrow-down.png");
+          position: absolute;
+          top: 50%;
+          right: 15px;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+}
