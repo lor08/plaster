@@ -2,6 +2,139 @@
 
   .section {
 
+    &.section-main {
+      margin-top: -56px;
+
+      .section__wrapper {
+        display: flex;
+        margin: 0 -6px;
+
+        .section__item {
+          margin: 0 6px;
+          padding: 170px 0 190px;
+
+          &.item-media {
+            width: calc(37% - 12px);
+            background: url('../img/main/main/section-bg-left.png') center center no-repeat;
+            background-size: cover;
+
+            .section__item-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: flex-end;
+              padding-right: 30px;
+            }
+
+            .list {
+              .list__item {
+                display: block;
+                margin-bottom: 25px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+              
+              .list__item-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                max-width: 32px;
+                max-height: 34px;
+
+                .icon {
+                  max-height: 34px;
+                }
+              }
+            }
+          }
+
+          &.item-content {
+            width: calc(63% - 12px);
+            background: url('../img/main/main/section-bg-right.jpg') center center no-repeat;
+            background-size: cover;
+            padding-left: 60px;
+            position: relative;
+
+            .section__title {
+              width: 770px;
+              max-width: 100%;
+
+              .h1 {
+                font-size: 53px;
+                font-weight: 900;
+                color: #4e595e;
+                text-transform: uppercase;
+
+                .small {
+                  display: block;
+                  font-size: 37px;
+                  font-weight: 400;
+                }
+              }
+            }
+
+            .list {
+              position: absolute;
+              display: flex;
+              border: 12px solid $pageColor;
+              bottom: 70px;
+              left: 0;
+
+              .list__item {
+                border-right: 12px solid $pageColor;
+                width: 190px;
+
+                &:nth-child(2n + 1) {
+                  background: url('../img/main/main/list-item-bg-1.png') center center no-repeat;
+                  background-size: cover;
+                }
+                &:nth-child(2n) {
+                  background: url('../img/main/main/list-item-bg-2.png') center center no-repeat;
+                  background-size: cover;
+                }
+
+                &:last-child {
+                  border-right: none;
+                }
+              }
+
+              .list__item-link {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                padding: 12px 10px;
+                height: 100%;
+              }
+
+              .item__image {
+                width: 40px;
+              }
+
+              .item__text {
+                text-align: center;
+                margin-bottom: 10px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+
+                .text {
+                  font-weight: 700;
+                  text-transform: uppercase;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.section-demo {
+      padding: 10px 0;
+    }
+
     &.section-invite {
       padding: 45px 0 55px;
       position: relative;
@@ -114,6 +247,117 @@
                 background: url('../img/input-light-green-bg.jpg') center center no-repeat;
                 background-size: cover;
               }
+            }
+          }
+        }
+      }
+    }
+
+    &.section-advantages {
+      padding: 80px 0;
+
+      .advantages-block {
+        margin-bottom: 60px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .container {
+          max-width: 1170px;
+        }
+
+        .advantages__wrapper {
+          display: flex;
+          margin: 0 -10px -20px;
+        }
+
+        .advantages__item {
+          width: calc(50% - 20px);
+          margin: 0 10px 20px;
+
+          &:nth-child(2n) {
+
+            .item__title {
+              margin-top: -25px;
+              margin-left: 90px;
+
+              &:before {
+                background: #4e595e;
+              }
+
+              .text {
+                color: #4e595e;
+              }
+
+              .big {
+                font-size: 64px;
+                display: block;
+                line-height: 1;
+              }
+            }
+
+            .item__image {
+              margin-top: -120px;
+            }
+          }
+
+          .item__wrapper {
+            display: flex;
+          }
+
+          .item__image {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: flex-start;
+          }
+
+          .item__content {
+            margin-left: -54px;
+
+            .list {
+
+              .list__item {
+                margin-bottom: 25px;
+
+                &:last-child {
+                  margin-bottom: 0;
+                }
+              }
+
+              .list__item-link {
+                color: #4e595e;
+                font-weight: 700;
+                font-size: 22px;
+                border-bottom: 1px #4e595e solid;
+              }
+            }
+          }
+
+          .item__title {
+            position: relative;
+            padding-bottom: 5px;
+            margin-bottom: 40px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: 4px;
+              width: 72px;
+              background: $primaryColor;
+            }
+
+            .text {
+              color: $primaryColor;
+              text-transform: uppercase;
+              font-weight: 900;
+              font-size: 30px;
             }
           }
         }

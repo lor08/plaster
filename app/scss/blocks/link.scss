@@ -3,4 +3,9 @@
   &.link-text-white {
     color: #fff;
   }
+
+  &.link-primary {
+    background: $primaryColor;
+    font-weight: 700;
+  }
 }

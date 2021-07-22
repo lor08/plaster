@@ -74,4 +74,41 @@
       }
     }
   }
+
+  &.form-search-header {
+
+    .form__input-wrapper {
+      position: relative;
+
+      .input {
+        background: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 1px #a9b4b8 solid;
+        width: 100%;
+        padding: 8px 27px 8px 10px;
+
+        &[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
+        &[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }
+        &[type="search"]::-webkit-search-decoration,
+        &[type="search"]::-webkit-search-cancel-button,
+        &[type="search"]::-webkit-search-results-button,
+        &[type="search"]::-webkit-search-results-decoration { display: none; }
+
+      }
+
+      .button {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 17px;
+        border: none;
+        outline: none;
+        background: transparent url('../img/icons/icon-search.png');
+        background-size: cover;
+      }
+    }
+  }
 }
