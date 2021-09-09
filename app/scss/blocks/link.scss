@@ -1,5 +1,16 @@
 .link {
 
+  &.link-blue {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #20286d;
+    color: #fff;
+    padding: 5px 20px;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.1);
+    font-weight: 700;
+  }
+
   &.link-text-white {
     color: #fff;
   }

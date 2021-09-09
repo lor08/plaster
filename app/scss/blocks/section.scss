@@ -1,3 +1,80 @@
+.section {
+
+  &.section-recommend {
+    padding: 40px 0;
+
+    .section__title {
+      margin-bottom: 44px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .text {
+        font-size: 25px;
+        color: #4e595e;
+        font-weight: 700;
+      }
+    }
+
+    .section__list {
+      margin-bottom: 44px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.section-live-wallpaper {
+    padding: 60px 0 40px;
+    background: #dee0e3;
+
+    .live-wallpaper-block {
+      width: 1040px;
+      max-width: 100%;
+
+      .live-wallpaper__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 -20px;
+      }
+
+      .item__title {
+        width: 200px;
+        margin: 0 20px;
+
+        .text {
+          color: #4e595e;
+          font-size: 25px;
+          font-weight: 700;
+          text-transform: uppercase;
+        }
+      }
+
+      .item__image {
+        width: 260px;
+        margin: 0 20px;
+      }
+
+      .item__list {
+        margin: 0 20px;
+
+        .list__wrapper {
+          display: flex;
+          align-items: center;
+          margin: 0 -55px;
+
+          .list {
+            margin: 0 55px;
+          }
+        }
+      }
+    }
+  }
+}
+
 .type-main {
 
   .section {
@@ -34,7 +111,7 @@
                   margin-bottom: 0;
                 }
               }
-              
+
               .list__item-link {
                 display: flex;
                 align-items: center;
@@ -89,6 +166,7 @@
                   background: url('../img/main/main/list-item-bg-1.png') center center no-repeat;
                   background-size: cover;
                 }
+
                 &:nth-child(2n) {
                   background: url('../img/main/main/list-item-bg-2.png') center center no-repeat;
                   background-size: cover;
@@ -149,6 +227,7 @@
         background: url('../img/main/invite/bg-1.jpg') center center no-repeat;
         background-size: cover;
       }
+
       &:after {
         content: '';
         position: absolute;
@@ -709,6 +788,7 @@
             background: url("../img/main/location/lb.png") center center no-repeat;
             background-size: cover;
           }
+
           .rb {
             position: absolute;
             bottom: 0;
@@ -718,6 +798,7 @@
             background: url("../img/main/location/rb.png") center center no-repeat;
             background-size: cover;
           }
+
           .rt {
             position: absolute;
             top: 0;
@@ -818,6 +899,14 @@
           }
         }
       }
+    }
+  }
+}
+
+.type-contacts {
+  .section {
+    &.section-recommend {
+      padding: 70px 0 170px;
     }
   }
 }

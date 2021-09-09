@@ -18,6 +18,15 @@ $(document).ready(function () {
                 });
             }
 
+            if ($(this).length && $(this).hasClass('slider-recommend')) {
+                sliderWrapper.slick({
+                    infinite: false,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    arrows: true,
+                });
+            }
+
             if ($(this).length && $(this).hasClass('slider-video')) {
                 sliderWrapper.slick({
                     infinite: true,

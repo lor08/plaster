@@ -31,4 +31,70 @@
     }
   }
 
+  &.list-advantages {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 -24px -24px;
+
+    .list__item {
+      margin: 0 24px 24px;
+      position: relative;
+      padding-bottom: 7px;
+
+      .text {
+        color: #4e595e;
+        font-size: 20px;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 94px;
+        height: 4px;
+      }
+      
+      &.-red {
+        &:before {
+          background-image: url('../img/border-red.png');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      &.-blue {
+        &:before {
+          background-image: url('../img/border-blue.png');
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+    }
+  }
+
+  &.list-dotted {
+    .list__item {
+      display: flex;
+      align-items: center;
+
+      &-link {
+        font-size: 16px;
+        color: #333c41;
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+
+      &:before {
+        content: '•';
+        color: #333c41;
+        margin-right: 4px;
+      }
+    }
+  }
 }
