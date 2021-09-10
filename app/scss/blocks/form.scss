@@ -80,13 +80,24 @@
     .form__input-wrapper {
       position: relative;
 
+      &:before {
+        content: '';
+        position: absolute;
+        height: 5px;
+        width: 92px;
+        background: #a9b4b8;
+        bottom: 0;
+        left: 0;
+        transform: translateY(100%);
+      }
+
       .input {
         background: transparent;
         border: none;
         outline: none;
         border-bottom: 1px #a9b4b8 solid;
         width: 100%;
-        padding: 8px 27px 8px 10px;
+        padding: 8px 27px 8px 0;
 
         &[type=text]::-ms-clear {  display: none; width : 0; height: 0; }
         &[type=text]::-ms-reveal {  display: none; width : 0; height: 0; }

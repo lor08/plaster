@@ -7,6 +7,28 @@ $(document).ready(function () {
         slider.each(function () {
             var sliderWrapper = $(this).find('.slider__wrapper');
 
+            if ($(this).length && $(this).hasClass('slider-main')) {
+                var sliderWrapperNav = $(this).find('.slider__wrapper-nav');
+
+                sliderWrapper.slick({
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    asNavFor: sliderWrapperNav,
+                });
+
+                sliderWrapperNav.slick({
+                    infinite: true,
+                    slidesToScroll: 1,
+                    slidesToShow: 12,
+                    focusOnSelect: true,
+                    variableWidth: true,
+                    arrows: false,
+                    asNavFor: sliderWrapper,
+                });
+            }
+
             if ($(this).length && $(this).hasClass('slider-trust')) {
                 sliderWrapper.slick({
                     infinite: true,

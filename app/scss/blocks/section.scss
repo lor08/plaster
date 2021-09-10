@@ -73,6 +73,23 @@
       }
     }
   }
+
+  &.section-certificate {
+    margin-bottom: 85px;
+
+    .section__title {
+      text-align: center;
+      margin-bottom: 25px;
+
+      .text {
+        color: #4e595e;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
 }
 
 .type-main {
@@ -907,6 +924,19 @@
   .section {
     &.section-recommend {
       padding: 70px 0 170px;
+    }
+  }
+}
+
+.type-brand-detail {
+
+  .section {
+
+    &.section-main {
+      margin-top: -58px;
+      padding: 80px 0 40px;
+      background: url('../img/main-slider/main-slider-bg.jpg') center center no-repeat;
+      background-size: cover;
     }
   }
 }

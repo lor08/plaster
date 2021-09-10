@@ -49,3 +49,21 @@
     }
   }
 }
+
+.certificate-block {
+  .certificate {
+
+    &__wrapper {
+      background: #dee0e3;
+      padding: 30px 9px 16px;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -9px;
+      border-radius: 10px;
+    }
+
+    &__item {
+      margin: 0 9px;
+    }
+  }
+}
