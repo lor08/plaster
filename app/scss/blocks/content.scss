@@ -67,3 +67,74 @@
     }
   }
 }
+
+.advantages-image-text-block {
+  .advantages__item {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 25px;
+      height: 1px;
+      background: #cad0d3;
+      width: 77%;
+    }
+
+    .item__wrapper {
+      display: flex;
+
+      .item__image {
+        margin-right: 28px;
+        width: 170px;
+        height: 145px;
+        flex: 0 0 auto;
+        position: relative;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px 0 rgba(0,0,0,.15);
+
+        .image-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: calc(100% - 16px);
+          height: calc(100% - 16px);
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      }
+
+      .item__title {
+        margin-bottom: 25px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .text {
+          text-transform: uppercase;
+          font-size: 25px;
+          color: #4e595e;
+          font-weight: 700;
+          line-height: 1.2;
+        }
+      }
+
+      .item__text {
+        max-width: 750px;
+        width: 100%;
+
+        .text {
+          color: #333c41;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

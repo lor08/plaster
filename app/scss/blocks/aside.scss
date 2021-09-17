@@ -1,0 +1,148 @@
+.aside {
+  width: 278px;
+
+  &__wrapper {
+    padding: 0 8px 16px;
+    background: #4e595e;
+  }
+
+  &__title {
+    padding: 40px 0;
+    text-align: center;
+    background: url("../img/aside/aside-title.jpg") center center no-repeat;
+    background-size: cover;
+
+    .text {
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 20px;
+      font-weight: 900;
+    }
+  }
+
+
+  &__menu {
+    background: #c2c9cc;
+    padding-bottom: 40px;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(-45deg, #4e595e 50%, #c2c9cc 50%);
+    }
+  }
+
+  .list-wrapper {
+
+    .list__title {
+      background: url('../img/aside/aside-title-bg.jpg') center center no-repeat;
+      background-size: cover;
+      padding: 5px 18px;
+
+      .text {
+        color: #ecedee;
+      }
+    }
+
+    .list {
+      padding: 10px 0;
+
+      &__item {
+
+        &.-has-sublist {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 5px;
+            width: 7px;
+            height: 12px;
+            transform: translateY(-50%);
+            background: url("../img/icons/aside-arrow-right.png") center center no-repeat;
+            background-size: contain;
+          }
+
+          .text {
+            font-weight: 500;
+            text-decoration: none;
+          }
+        }
+
+        &.-active {
+          background: #d0d6d8;
+
+          .sublist {
+            display: block;
+          }
+        }
+      }
+
+      &__item-link {
+        display: block;
+        padding: 5px 18px;
+
+        .text {
+          color: #3f484b;
+          text-decoration: underline;
+          transition: .2s;
+        }
+
+        &:hover {
+          .text {
+            color: $primaryColor;
+          }
+        }
+      }
+
+      .sublist {
+        padding: 5px 32px;
+        display: none;
+
+        &__item-link {
+          display: block;
+          padding: 5px 0;
+          
+          .text {
+            color: #3f484b;
+            text-decoration: underline;
+            transition: .2s;
+          }
+
+          &:hover {
+            .text {
+              color: $primaryColor;
+            }
+          }
+
+          &.-active {
+            position: relative;
+
+            .text {
+              font-weight: 500;
+              text-decoration: none;
+            }
+
+            &:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: -10px;
+              width: 5px;
+              height: 9px;
+              transform: translateY(-50%);
+              background: url("../img/icons/aside-arrow-right.png") center center no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+  }
+}

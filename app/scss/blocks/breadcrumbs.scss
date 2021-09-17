@@ -1,0 +1,49 @@
+.breadcrumbs {
+  margin-bottom: 15px;
+
+  .list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .list__item {
+      margin-right: 4px;
+      display: flex;
+      align-items: center;
+
+      &:after {
+        content: '→';
+        color: #a9b4b8;
+        margin-left: 4px;
+        margin-bottom: 2px;
+        font-size: 12px;
+      }
+
+      &:last-child {
+        margin-right: 0;
+
+        &:after {
+          display: none;
+        }
+      }
+
+      .text {
+        font-size: 14px;
+        color: #a9b4b8;
+        transition: .2s;
+      }
+
+      &-link {
+        .text {
+          text-decoration: underline;
+        }
+
+        &:hover {
+          .text {
+            color: $primaryColor;
+          }
+        }
+      }
+    }
+  }
+}
