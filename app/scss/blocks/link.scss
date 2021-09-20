@@ -19,4 +19,25 @@
     background: $primaryColor;
     font-weight: 700;
   }
+
+  &.link-gray {
+    height: 42px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #4e595e;
+    padding: 5px 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    color: #fff;
+
+    &:hover {
+      transform: translateY(-1px);
+      background: #68767C;
+    }
+
+    &:active {
+      background: #3E474C;
+    }
+  }
 }

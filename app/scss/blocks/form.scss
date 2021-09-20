@@ -122,4 +122,117 @@
       }
     }
   }
+
+  &.form-online-question {
+    border-radius: 10px;
+    padding: 14px 10px 10px 120px;
+    position: relative;
+    background: #dee0e3 url('../img/3d/info-image-4.png') 30px 20px no-repeat;
+    background-size: 100px;
+
+    .form__title {
+      margin-left: 8px;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .text {
+        text-transform: uppercase;
+        color: #c93834;
+        font-size: 20px;
+        font-weight: 700;
+      }
+    }
+
+    .form__input-wrapper {
+      display: flex;
+      flex-direction: column;
+
+      .input {
+        background: #fff;
+        height: 22px;
+        width: 100%;
+        margin-bottom: 8px;
+        border: none;
+        outline: none;
+        padding: 5px 8px;
+        color: #333c41;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::placeholder {
+          color: rgba(51,60,65,.5);
+        }
+
+        &.input-textarea {
+          height: 82px;
+          resize: none;
+        }
+      }
+    }
+
+    .form__button {
+      position: absolute;
+      z-index: 1;
+      right: 0;
+      bottom: 10px;
+
+      .button {
+        width: 115px;
+        height: 28px;
+        background: #c93834;
+        border: none;
+        outline: none;
+        font-weight: 700;
+        font-size: 12px;
+        box-shadow: 2px 2px 2px 0 rgba(78,89,94,.3);
+      }
+    }
+  }
+
+  &.form-footer-mail {
+    border-bottom: 1px #a9b4b8 solid;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      transform: translateY(100%);
+      width: 92px;
+      height: 4px;
+      background: #a9b4b8;
+    }
+
+    .input {
+      background: none;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      color: #a9b4b8;
+
+      &::placeholder {
+        font-size: 14px;
+        color: #a9b4b8;
+      }
+    }
+
+    .button {
+      background: #a9b4b8;
+      border :none;
+      outline: none;
+      color: #555f65;
+      font-size: 12px;
+      font-weight: 700;
+      height: 27px;
+      width: 167px;
+    }
+  }
 }

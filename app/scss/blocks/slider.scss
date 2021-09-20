@@ -608,8 +608,8 @@
         display: none !important;
       }
 
-      .slider__item {
-        .text {
+      .nav__item {
+        .link {
           max-width: 174px;
           min-width: 90px;
           height: 42px;
@@ -626,13 +626,13 @@
         }
 
         &:first-of-type {
-          .text {
+          .link {
             border-left: none;
           }
         }
 
-        &.slick-current {
-          .text {
+        &.-active {
+          .link {
             width: 174px;
             background: url("../img/input-white-border-bg.jpg") center center no-repeat;
             background-size: cover;
@@ -641,11 +641,164 @@
             color: #282578;
           }
 
-          & + .slick-active {
-            .text {
+          & + .nav__item {
+            .link {
               border-left: none;
             }
           }
+        }
+      }
+    }
+  }
+
+  &.slider-double-video {
+    position: relative;
+
+    .slider-button-prev {
+      width: 41px;
+      height: 79px;
+      position: absolute;
+      background: url('../img/icons/icon-arrow-gray-left.png') center center no-repeat;
+      background-size: cover;
+      top: 158px;
+      left: -23px;
+      transform: translate(-100%, -50%);
+      cursor: pointer;
+      transition: .2s;
+
+      &:hover {
+        transform: translate(-100%, calc(-50% - 2px));
+      }
+    }
+
+    .slider-button-next {
+      width: 41px;
+      height: 79px;
+      position: absolute;
+      background: url('../img/icons/icon-arrow-gray-right.png') center center no-repeat;
+      background-size: cover;
+      top: 158px;
+      right: -23px;
+      transform: translate(100%, -50%);
+      cursor: pointer;
+      transition: .2s;
+
+      &:hover {
+        transform: translate(100%, calc(-50% - 2px));
+      }
+    }
+
+    .slider__wrapper {
+      margin: 0 -23px;
+    }
+
+    .slider__item {
+      margin: 0 23px;
+
+      .item__video {
+        margin-bottom: 25px;
+        display: flex;
+        position: relative;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .video {
+          max-width: 100%;
+        }
+
+        .video-image {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          cursor: pointer;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -30%);
+            width: 50px;
+            height: 50px;
+            background: url("../img/slider-double-video/icon-play.png") center center no-repeat;
+            background-size: cover;
+            z-index: 2;
+            transition: .2s;
+            opacity: 0;
+            visibility: hidden;
+          }
+
+          &:hover {
+            &:before {
+              opacity: 1;
+              visibility: visible;
+              transform: translate(-50%, -50%);
+            }
+          }
+        }
+      }
+
+      .item__title {
+        margin-bottom: 25px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .text {
+          font-size: 30px;
+          color: #4e595e;
+          position: relative;
+
+          &.-border-bottom-blue {
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom:0;
+              transition: .2s;
+              transform: translateY(100%);
+              width: 92px;
+              height: 4px;
+              background: url('../img/slider-double-video/border-bottom-blue.jpg') center center no-repeat;
+              background-size: cover;
+              z-index: 1;
+            }
+          }
+
+          &.-border-bottom-red {
+            &:before {
+              content: '';
+              position: absolute;
+              left: 0;
+              bottom:0;
+              transition: .2s;
+              transform: translateY(100%);
+              width: 92px;
+              height: 4px;
+              background: url('../img/slider-double-video/border-bottom-red.jpg') center center no-repeat;
+              background-size: cover;
+              z-index: 1;
+            }
+          }
+        }
+      }
+
+      .item__text {
+        margin-bottom: 25px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .text {
+          color: #4e595e;
+          line-height: 1.6;
         }
       }
     }

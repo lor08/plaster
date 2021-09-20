@@ -1,31 +1,63 @@
 $(document).ready(function () {
-
     //slider
     $(function () {
         var slider = $('.slider');
 
         slider.each(function () {
-            var sliderWrapper = $(this).find('.slider__wrapper');
+            var sliderWrapper = $(this).children('.slider__wrapper');
 
             if ($(this).length && $(this).hasClass('slider-main')) {
-                var sliderWrapperNav = $(this).find('.slider__wrapper-nav');
+
+                var sliderNavItem = $(this).parent().find('.slider__wrapper-nav .nav__item');
 
                 sliderWrapper.slick({
                     infinite: true,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     arrows: true,
-                    asNavFor: sliderWrapperNav,
                 });
 
-                sliderWrapperNav.slick({
+                sliderWrapper.on('afterChange', function (event, slick, currentSlide, nextSlide) {
+                    sliderNavItem.each(function () {
+                        if ($(this).index() == currentSlide) {
+                            $(this).addClass('-active');
+                        } else {
+                            $(this).removeClass('-active');
+                        }
+                    });
+                });
+
+
+                sliderNavItem.click(function () {
+                    if (!$(this).hasClass('-active')) {
+                        sliderNavItem.removeClass('-active');
+                        $(this).addClass('-active');
+                        sliderWrapper.slick('slickGoTo', $(this).index());
+                    }
+                });
+            }
+
+            if ($(this).length && $(this).hasClass('slider-double-video')) {
+
+                sliderWrapper.slick({
                     infinite: true,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
-                    slidesToShow: 12,
-                    focusOnSelect: true,
-                    variableWidth: true,
-                    arrows: false,
-                    asNavFor: sliderWrapper,
+                    arrows: true,
+                    prevArrow: $(this).find('.slider-button-prev'),
+                    nextArrow: $(this).find('.slider-button-next'),
+                });
+
+                var sliderItem = $(this).find('.slider__item');
+
+                sliderItem.each(function () {
+                    var videoImage = $(this).find('.video-image'),
+                        video = $(this).find('.video');
+
+                    videoImage.click(function () {
+                        $(this).fadeOut();
+                        video.get(0).play();
+                    });
                 });
             }
 

@@ -54,7 +54,7 @@
 
       &__item {
 
-        &.-has-sublist {
+        &.-active {
           position: relative;
 
           &:before {
@@ -73,10 +73,10 @@
             font-weight: 500;
             text-decoration: none;
           }
-        }
 
-        &.-active {
-          background: #d0d6d8;
+          &.-has-sublist {
+            background: #d0d6d8;
+          }
 
           .sublist {
             display: block;
