@@ -125,7 +125,7 @@
         .text {
           text-transform: uppercase;
           font-size: 25px;
-          color: #4e595e;
+          color: $grayColor;
           font-weight: 700;
           line-height: 1.2;
         }
@@ -189,7 +189,7 @@
       }
 
       .text {
-        color: #4e595e;
+        color: $grayColor;
         font-size: 30px;
         font-weight: 400;
         position: relative;
@@ -293,7 +293,7 @@
 
             .text {
               font-size: 22px;
-              color: #4e595e;
+              color: $grayColor;
               font-weight: 700;
               text-transform: uppercase;
             }
@@ -307,6 +307,51 @@
 }
 
 .collection-block {
+
+  .collection__title {
+    margin-bottom: 24px;
+    display: block;
+    border-bottom: 1px #cad0d3 solid;
+    padding-bottom: 24px;
+
+    .text {
+      font-size: 30px;
+      color: #4e595e;
+      font-weight: 400;
+      text-transform: none;
+      position: relative;
+
+      &.-border-bottom-blue {
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 92px;
+          height: 4px;
+          z-index: 1;
+          transform: translateY(100%);
+          background: url('../img/77/border-bottom-blue.jpg');
+          background-size: cover;
+        }
+      }
+
+      &.-border-bottom-red {
+        &:before {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 92px;
+          height: 4px;
+          z-index: 1;
+          transform: translateY(100%);
+          background: url('../img/77/border-bottom-red.jpg');
+          background-size: cover;
+        }
+      }
+    }
+  }
 
   .collection__item {
     margin-bottom: 24px;
@@ -367,7 +412,7 @@
       .text {
         font-weight: 700;
         font-size: 20px;
-        color: #4e595e;
+        color: $grayColor;
       }
     }
 
@@ -377,5 +422,24 @@
         line-height: 1.4;
       }
     }
+  }
+}
+
+.presentation-block {
+
+  .presentation__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background: #fff;
+  }
+
+
+  .presentation__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

@@ -3,7 +3,7 @@
 
   &__wrapper {
     padding: 0 8px 16px;
-    background: #4e595e;
+    background: $grayColor;
   }
 
   &__title {
@@ -33,7 +33,7 @@
       right: 0;
       width: 40px;
       height: 40px;
-      background: linear-gradient(-45deg, #4e595e 50%, #c2c9cc 50%);
+      background: linear-gradient(-45deg, $grayColor 50%, #c2c9cc 50%);
     }
   }
 
@@ -55,18 +55,21 @@
       &__item {
 
         &.-active {
-          position: relative;
 
-          &:before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 5px;
-            width: 7px;
-            height: 12px;
-            transform: translateY(-50%);
-            background: url("../img/icons/aside-arrow-right.png") center center no-repeat;
-            background-size: contain;
+          .list__item-link {
+            position: relative;
+
+            &:before {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 5px;
+              width: 7px;
+              height: 12px;
+              transform: translateY(-50%);
+              background: url("../img/icons/aside-arrow-right.png") center center no-repeat;
+              background-size: contain;
+            }
           }
 
           .text {
@@ -80,6 +83,18 @@
 
           .sublist {
             display: block;
+
+            .sublist__item-link {
+              .text {
+                font-weight: 400;
+              }
+
+              &.-active {
+                .text {
+                  font-weight: 500;
+                }
+              }
+            }
           }
         }
       }

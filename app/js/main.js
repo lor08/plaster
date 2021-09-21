@@ -61,6 +61,17 @@ $(document).ready(function () {
                 });
             }
 
+            if ($(this).length && $(this).hasClass('slider-catalog')) {
+                sliderWrapper.slick({
+                    infinite: true,
+                    slidesToShow: 6,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    prevArrow: $(this).find('.slider-button-prev'),
+                    nextArrow: $(this).find('.slider-button-next'),
+                });
+            }
+
             if ($(this).length && $(this).hasClass('slider-trust')) {
                 sliderWrapper.slick({
                     infinite: true,

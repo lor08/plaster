@@ -1,4 +1,5 @@
 .slider {
+  position: relative;
 
   &.slider-trust {
     padding: 0 75px;
@@ -68,7 +69,7 @@
             }
 
             .text {
-              color: #4e595e;
+              color: $grayColor;
               font-size: 30px;
             }
           }
@@ -93,7 +94,7 @@
             }
 
             .text {
-              color: #4e595e;
+              color: $grayColor;
             }
           }
         }
@@ -289,7 +290,7 @@
             margin-bottom: 10px;
 
             .text {
-              color: #4e595e;
+              color: $grayColor;
               font-size: 20px;
               font-weight: 700;
             }
@@ -297,7 +298,7 @@
 
           &__text {
             .text {
-              color: #4e595e;
+              color: $grayColor;
 
             }
           }
@@ -442,7 +443,7 @@
           transition: .3s;
 
           .text {
-            color: #4e595e;
+            color: $grayColor;
             font-size: 15px;
             font-weight: 300;
 
@@ -619,7 +620,7 @@
           border-left: 2px #92979c solid;
           padding: 0 15px;
           cursor: pointer;
-          color: #4e595e;
+          color: $grayColor;
           font-size: 16px;
           text-align: center;
           line-height: 1.1;
@@ -752,7 +753,7 @@
 
         .text {
           font-size: 30px;
-          color: #4e595e;
+          color: $grayColor;
           position: relative;
 
           &.-border-bottom-blue {
@@ -797,10 +798,80 @@
         }
 
         .text {
-          color: #4e595e;
+          color: $grayColor;
           line-height: 1.6;
         }
       }
+    }
+  }
+
+  &.slider-catalog {
+    padding: 10px 70px 10px 30px;
+    background: #fff;
+    border-radius: 10px;
+
+    .slider__wrapper {
+      margin: 0 -12px;
+
+      .slick-list {
+        padding: 10px 0 20px;
+      }
+    }
+
+    .slider__item {
+      margin: 0 12px;
+
+      .item__image {
+        width: 153px;
+        height: 209px;
+        border: 8px #fff solid;
+        border-radius: 8px;
+        box-shadow: 0 0 4px 2px rgba(0,0,0,.1);
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .item__title {
+        margin-bottom: 6px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .text {
+          font-weight: 700;
+          text-transform: uppercase;
+          color: #0a4057;
+          font-size: 20px;
+          line-height: 1.1;
+        }
+      }
+
+      .item__link {
+        .link {
+          font-weight: 300;
+          color: #4e595e;
+          font-size: 15px;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .slider-button-next {
+      width: 20px;
+      height: 39px;
+      position: absolute;
+      top: 104px;
+      right: 17px;
+      background: url('../img/icons/icon-arrow-gray-right.png') center center no-repeat;
+      background-size: cover;
+      cursor: pointer;
     }
   }
 }
