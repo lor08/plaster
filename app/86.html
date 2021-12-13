@@ -37,6 +37,32 @@
 
                 <div class="header__item">
                     <nav class="header__nav">
+                        <div class="header__search -mobile">
+                            <form action="#" class="form form-search-header">
+                                <div class="form__input-wrapper">
+                                    <input type="search" class="input input-search" placeholder="Поиск по сайту">
+                                    <button class="button" type="submit"></button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="header__city -tablet">
+                            <div class="header__city-wrapper">
+                                <div class="city__title">
+                            <span class="text">
+                                Ваш город:
+                            </span>
+                                </div>
+
+                                <div class="city__link">
+                                    <a href="javascript:;" class="link">
+                                        <span class="text">Москва</span>
+                                        <img src="./img/icons/icon-location-white.png" alt="" class="icon">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                         <ul class="list">
                             <li class="list__item"><a href="javascript:;" class="list__item-link">Интернет магазин</a>
                             <li class="list__item"><a href="javascript:;" class="list__item-link">О компании</a>
@@ -47,6 +73,46 @@
                                 магазинов</a></li>
                             <li class="list__item"><a href="javascript:;" class="list__item-link">Партнерам</a></li>
                         </ul>
+
+                        <div class="header__control -mobile">
+                            <div class="header__control-wrapper">
+                                <ul class="header__control-list">
+                                    <li class="header__control-item">
+                                        <a href="javascript:;" class="link">
+                                            <img src="./img/icons/icon-basket.png" alt="" class="icon">
+                                        </a>
+                                    </li>
+                                    <li class="header__control-item">
+                                        <a href="javascript:;" class="link">
+                                            <img src="./img/icons/icon-arrow-reverse.png" alt="" class="icon">
+                                        </a>
+                                    </li>
+                                    <li class="header__control-item">
+                                        <a href="javascript:;" class="link">
+                                            <img src="./img/icons/icon-heart-plus.png" alt="" class="icon">
+                                        </a>
+                                    </li>
+                                </ul>
+
+                                <div class="header__control-button">
+                                    <a href="javascript:;" class="link link-white-border">Личный кабинет</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="header__contact -phone">
+                            <div class="contact contact-phone">
+                                <img src="./img/icons/icon-phone-header.png" alt="" class="icon">
+                                <div class="text-block">
+                                    <a href="tel:8-800-200-00-00" class="link">
+                                        <p class="count">8-800-200-00-00</p>
+                                    </a>
+                                    <a href="tel:8-800-200-00-00" class="link">
+                                        <p class="text">Заказать звонок</p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </nav>
                     <div class="header__contact">
                         <div class="contact contact-phone">
@@ -60,6 +126,11 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="header__menu">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
                     </div>
                 </div>
             </div>
@@ -126,6 +197,313 @@
 </header>
 <!-- end header.html-->
     <main class="main">
+<!-- start main-title.html-->
+<div class="main-title">
+    <div class="container">
+        <h1 class="h1 text">
+            Адреса магазинов
+        </h1>
+    </div>
+</div>
+<!-- end main-title.html-->
+<!-- start breadcrumbs.html-->
+<div class="breadcrumbs -single">
+    <div class="container">
+        <ul class="list">
+            <li class="list__item"><a href="javascript:;" class="list__item-link">
+                <p class="text">Главная</p>
+            </a></li>
+            <li class="list__item"><a href="javascript:;" class="list__item-link">
+                <p class="text">Магазины</p>
+            </a></li>
+            <li class="list__item"><a href="javascript:;" class="list__item-link">
+                <p class="text">Жидкие обои в России</p>
+            </a></li>
+            <li class="list__item">
+                <p class="text">Жидкие обои в Москве и Московской области</p>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- end breadcrumbs.html-->
+<!-- start section-map.html-->
+<section class="section section-map" id="section-map">
+    <div class="container">
+        <div class="section__title -gray">
+            <h3 class="h3 text">
+                Фирменный салон Silk Plaster. ТЦ Декоратор на Рязанском проспекте
+            </h3>
+        </div>
+
+        <div class="map-block">
+            <div class="map__title">
+                <p class="text">
+                    Магазины SILK PLASTER в других городах
+                </p>
+            </div>
+
+            <div class="map__wrapper">
+                <div class="map__content">
+                    <iframe class="map-iframe"
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a83d63ae62b949cc5fac5a72ddf49ce69e2ad1bc05ef7de9bae70a478442ba7&amp;source=constructor"></iframe>
+                </div>
+                <div class="map__info">
+                    <ul class="list">
+                        <li class="list__item">
+                            <p class="text">Адрес</p>
+                            <p class="count">
+                                Фирменный салон
+                                Silk Plaster.
+                                ТЦ Декоратор
+                                на Рязанском проспекте,
+                                Рязанский проспект
+                                2 корп. 3. Этаж 1,
+                                салон №168
+                                (напротив МФЦ)
+                            </p>
+                        </li>
+                        <li class="list__item item-phone">
+                            <p class="text">Телефон</p>
+                            <p class="count">
+                                <a href="tel:+7 (495) 740-38-76" class="link">+7 (495) 740-38-76</a>
+                                <a href="tel:+7 (495) 740-38-79" class="link">+7 (495) 740-38-79</a>
+                                <a href="tel:+7 (966) 074-69-00" class="link">+7 (966) 074-69-00</a>
+                            </p>
+                        </li>
+                        <li class="list__item">
+                            <p class="text">Email</p>
+                            <p class="count">
+                                <a href="mailto:info@pv2.ru" class="link underline">info@pv2.ru</a>
+                            </p>
+                        </li>
+                        <li class="list__item">
+                            <p class="text">
+                                Режим
+                                работы
+                            </p>
+                            <p class="count">
+                                Мы работаем<br>
+                                каждый день
+                                <span class="underline">
+                                    с 10:00 до 22:00
+                                </span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section-map.html-->
+<!-- start section-about-shop.html-->
+<section class="section section-about-shop" id="section-about-shop">
+    <div class="container">
+        <div class="section__title -blue">
+            <h2 class="h2 text">
+                Фирменный магазин жидких обоев
+                и шелковой декоративной штукатурки SILK PLASTER
+            </h2>
+        </div>
+
+        <div class="shop-detail-block">
+            <div class="shop-tags">
+                <ul class="list list-shop-tags">
+                    <li class="list__item"><img src="./img/map/icon-bag.png" alt="img" class="image"></li>
+                    <li class="list__item"><img src="./img/map/icon-crush-ball.png" alt="img" class="image"></li>
+                    <li class="list__item"><img src="./img/map/icon-shop.png" alt="img" class="image"></li>
+                    <li class="list__item"><img src="./img/map/icon-paint.png" alt="img" class="image"></li>
+                    <li class="list__item"><img src="./img/map/icon-staff.png" alt="img" class="image"></li>
+                    <li class="list__item"><img src="./img/map/icon-image.png" alt="img" class="image"></li>
+                </ul>
+            </div>
+
+
+            <div class="shop-detail__wrapper">
+                <div class="shop-detail__item">
+                    <div class="shop-detail__content">
+                        <div class="sd__item">
+                            <div class="sd__text">
+                                <p class="text">
+                                    Представлен полный ассортимент продукции. Наши консультанты всегда помогут и ответят
+                                    на
+                                    все вопросы, связанные с материалом.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sd__item">
+                            <div class="sd__title">
+                                <p class="text">
+                                    Доставка по Москве (внутри МКАД):
+                                </p>
+                            </div>
+
+                            <div class="sd__list">
+                                <ul class="list list-dotted">
+                                    <li class="list__item">
+                                        <p class="text">
+                                            Заказ на сумму менее 500 руб. — самовывоз
+                                        </p>
+                                    </li>
+                                    <li class="list__item">
+                                        <p class="text">
+                                            Заказ на сумму от 500 до 3000 руб. — стоимость доставки 500 руб.
+                                        </p>
+                                    </li>
+                                    <li class="list__item">
+                                        <p class="text">
+                                            Заказы от 3000 руб. — доставим БЕСПЛАТНО
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <div class="sd__item">
+                            <div class="sd__title">
+                                <p class="text">
+                                    Доставка за МКАД<br>
+                                    (Москва и Московская область):
+                                </p>
+                            </div>
+
+                            <div class="sd__list">
+                                <ul class="list list-dotted">
+                                    <li class="list__item">
+                                        <p class="text">
+                                            Заказ на сумму от 500 до 3000 руб. — стоимость доставки 500 руб. + 30 руб./1
+                                            км
+                                            от МКАД
+                                        </p>
+                                    </li>
+                                    <li class="list__item">
+                                        <p class="text">Заказы от 3000 до 15000 руб. — доставка 30 руб./1 км от МКАД</p>
+                                    </li>
+                                    <li class="list__item">
+                                        <p class="text">Заказы от 15000 руб. — доставим БЕСПЛАТНО</p>
+                                    </li>
+                                    <li class="list__item">
+                                        <p class="text">Стоимость доставки более 100 км от МКАД согласовывается
+                                            индивидуально</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="sd__text -white-bg">
+                                <p class="text">
+                                    Оплата товара возможна наличными в кассу, безналичным расчетом картами VISA и
+                                    другими,
+                                    перечислением на расчетный счет предприятия по выставленному счету, наличными при
+                                    получении товара на дому (выдается кассовый чек, предупреждайте о наличии дисконтной
+                                    карты заранее).
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="sd__link">
+                            <a href="javascript:;" class="link link-primary">
+                                Посмотреть все магазины
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-detail__item">
+                    <div class="shop-detail__gallery">
+                        <div class="sdg__wrapper">
+                            <div class="sdg__item"><a href="./img/map/map-about-image-1.png" class="link fancybox"
+                                                      data-fancybox="sdg-gallery"><img
+                                    src="./img/map/map-about-image-1.png" alt="" class="image"></a></div>
+                            <div class="sdg__item"><a href="./img/map/map-about-image-2.png" class="link fancybox"
+                                                      data-fancybox="sdg-gallery"><img
+                                    src="./img/map/map-about-image-2.png" alt="" class="image"></a></div>
+                            <div class="sdg__item"><a href="./img/map/map-about-image-3.png" class="link fancybox"
+                                                      data-fancybox="sdg-gallery"><img
+                                    src="./img/map/map-about-image-3.png" alt="" class="image"></a></div>
+                            <div class="sdg__item"><a href="./img/map/map-about-image-4.png" class="link fancybox"
+                                                      data-fancybox="sdg-gallery"><img
+                                    src="./img/map/map-about-image-4.png" alt="" class="image"></a></div>
+                        </div>
+
+                        <div class="sdg__link">
+                            <a href="javascript:;" class="link">
+                                Все фотографии
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="shop-detail__categories">
+                        <ul class="list">
+                            <li class="list__item">
+                                <a href="javascript:;" class="link">
+                                    <div class="image-wrapper">
+                                        <img src="./img/map/icon-bag-big.png" alt="" class="image">
+                                    </div>
+                                    <p class="text">
+                                        Доставка
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="javascript:;" class="link">
+                                    <div class="image-wrapper">
+                                        <img src="./img/map/icon-shop-big.png" alt="" class="image">
+                                    </div>
+                                    <p class="text">
+                                        Доставка
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="javascript:;" class="link">
+                                    <div class="image-wrapper">
+                                        <img src="./img/map/icon-crush-ball-big.png" alt="" class="image">
+                                    </div>
+                                    <p class="text">
+                                        Доставка
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="javascript:;" class="link">
+                                    <div class="image-wrapper">
+                                        <img src="./img/map/icon-paint-big.png" alt="" class="image">
+                                    </div>
+                                    <p class="text">
+                                        Доставка
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="javascript:;" class="link">
+                                    <div class="image-wrapper">
+                                        <img src="./img/map/icon-staff-big.png" alt="" class="image">
+                                    </div>
+                                    <p class="text">
+                                        Доставка
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="list__item">
+                                <a href="javascript:;" class="link">
+                                    <div class="image-wrapper">
+                                        <img src="./img/map/icon-image-big.png" alt="" class="image">
+                                    </div>
+                                    <p class="text">
+                                        Доставка
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- end section-about-shop.html-->
 <!-- start section-live-wallpaper.html-->
 <section class="section section-live-wallpaper" id="section-live-wallpaper">
     <div class="container">
@@ -561,12 +939,49 @@
                             <div class="footer__callback-wrapper">
                                 <div class="footer__form">
                                     <form action="#" class="form form-footer-mail">
-                                        <input type="email" class="input" name="form-footer-mail-email" placeholder="Оставьте свой е-мейл">
+                                        <input type="email" class="input" name="form-footer-mail-email"
+                                               placeholder="Оставьте свой е-мейл">
                                         <button class="button" type="submit">Подписаться на новости</button>
                                     </form>
                                 </div>
                                 <div class="footer__media">
-                                    <img src="./img/footer/footer-media.png" alt="" class="image">
+                                    <ul class="list">
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-1.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-2.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-3.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-4.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-5.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-6.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                        <li class="list__item">
+                                            <a href="javascript:;" class="list__item-link">
+                                                <img src="./img/footer/media-7.png" alt="media-icon">
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -592,10 +1007,11 @@
                                         конфиденциальности</a></li>
                                 </ul>
 
-                                <div class="text-wrapper">
+                                <div class="text-wrapper -cards">
                                     <p class="text">
                                         Мы принимаем к оплате карты:
                                     </p>
+                                    <img src="./img/footer/cards.png" alt="" class="image">
                                 </div>
                             </div>
                         </div>
@@ -609,11 +1025,13 @@
                                     </div>
                                     <div class="item__list">
                                         <ul class="list list-opacity-link">
-                                            <li class="list__item"><a href="" class="list__item-link">О компании</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">О компании</a>
+                                            </li>
                                             <li class="list__item"><a href="" class="list__item-link">Новости</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Магазины</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Контакты</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Стать дилером</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Стать дилером</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -625,12 +1043,17 @@
                                     </div>
                                     <div class="item__list">
                                         <ul class="list list-opacity-link">
-                                            <li class="list__item"><a href="" class="list__item-link">Жидкие обои</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Декоративная штукатурка</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Идеи интерьеров</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Жидкие обои</a>
+                                            </li>
+                                            <li class="list__item"><a href="" class="list__item-link">Декоративная
+                                                штукатурка</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Идеи
+                                                интерьеров</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Статьи</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Silk Plaster на ТВ</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Акции и конкурсы</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Silk Plaster на
+                                                ТВ</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Акции и
+                                                конкурсы</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Оплата</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Рассрочка</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Доставка</a></li>
@@ -646,11 +1069,15 @@
                                     <div class="item__list">
                                         <ul class="list list-opacity-link">
                                             <li class="list__item"><a href="" class="list__item-link">Нанесение</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Подготовка поверхности</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Рисунки жидкими обоями</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">Расчет стоимости</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Подготовка
+                                                поверхности</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Рисунки жидкими
+                                                обоями</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">Расчет
+                                                стоимости</a></li>
                                             <li class="list__item"><a href="" class="list__item-link">Обзоры</a></li>
-                                            <li class="list__item"><a href="" class="list__item-link">3D конструктор</a></li>
+                                            <li class="list__item"><a href="" class="list__item-link">3D конструктор</a>
+                                            </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -685,6 +1112,26 @@
                                     <span class="text">
                                         адрес центрального офиса
                                     </span>
+                                    </div>
+                                </li>
+                                <li class="footer__contact-item contact-address">
+                                    <div class="item__icon">
+                                    </div>
+                                    <div class="item__image">
+                                        <span class="text">
+                                            Сайты SILK PLASTER в мире
+                                        </span>
+                                        <div class="image-wrapper">
+                                            <a href="javascript:;" class="link">
+                                                <img src="./img/footer/flag-1.png" alt="" class="image">
+                                            </a>
+                                            <a href="javascript:;" class="link">
+                                                <img src="./img/footer/flag-2.png" alt="" class="image">
+                                            </a>
+                                            <a href="javascript:;" class="link">
+                                                <img src="./img/footer/flag-3.png" alt="" class="image">
+                                            </a>
+                                        </div>
                                     </div>
                                 </li>
                             </ul>

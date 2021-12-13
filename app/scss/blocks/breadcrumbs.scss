@@ -1,6 +1,33 @@
 .breadcrumbs {
   margin-bottom: 15px;
 
+  &.-no-line {
+    .list {
+      &:after {
+        display: none;
+      }
+    }
+  }
+
+  &.-single {
+    margin: 30px 0 15px;
+
+    .list {
+      padding-bottom: 15px;
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 254px;
+        height: 1px;
+        bottom: 0;
+        left: 20px;
+        border-bottom: 1px #fff dotted;
+        position: absolute;
+      }
+    }
+  }
+
   .list {
     display: flex;
     align-items: center;
@@ -45,5 +72,9 @@
         }
       }
     }
+  }
+
+  .type-detail & {
+    margin: 20px 0 24px;
   }
 }

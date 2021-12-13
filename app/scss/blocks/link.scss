@@ -18,10 +18,18 @@
   &.link-primary {
     background: $primaryColor;
     font-weight: 700;
+
+    &:hover {
+      background: $primaryColorHover;
+    }
+
+    &:active {
+      background: $primaryColorActive;
+    }
   }
 
   &.link-gray {
-    height: 42px;
+    min-height: 42px;
     display: inline-flex;
     justify-content: center;
     align-items: center;

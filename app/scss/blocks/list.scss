@@ -1,7 +1,41 @@
 .list {
 
+  &.list-shop-tags {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 -5px -10px;
+
+    .list__item {
+      margin: 0 5px 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .image {
+        max-width: 36px;
+        transition: .2s;
+      }
+
+      &:hover {
+        .image {
+          transform: translateY(-2px);
+        }
+      }
+
+      &.-disabled {
+
+        .image {
+          filter: grayscale(100%);
+          filter: gray; /* IE 6-9 */
+        }
+      }
+    }
+  }
+
   &.list-footer-media {
     display: flex;
+    margin: 0 -10px;
 
     .list__item {
       margin: 0 10px;

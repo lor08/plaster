@@ -43,11 +43,32 @@
 
     &-wrapper {
       display: flex;
-      margin:0 -22px -22px;
+      margin: 0 -35px -22px;
+
+      @media (max-width: $bpDesktop) {
+        margin: 0 -22px -22px;
+      }
+
+      @media (max-width: $bpLaptop) {
+        display: block;
+        margin: 0 0 22px;
+      }
     }
 
     &-item {
-      margin: 0 22px 22px;
+      margin: 0 35px 22px;
+
+      @media (max-width: $bpDesktop) {
+        margin: 0 22px 22px;
+      }
+
+      @media (max-width: $bpLaptop) {
+        margin: 0 0 22px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
 
       &.item-info {
         display: flex;
@@ -55,6 +76,7 @@
       }
 
       &.item-contacts {
+        max-width: 210px;
         flex: 0 0 auto;
       }
     }
@@ -68,18 +90,54 @@
       display: flex;
       margin: 0 -35px;
       align-items: flex-end;
+
+      @media (max-width: $bpMobile) {
+        display: block;
+        margin: 0;
+      }
     }
 
     .footer__media {
       margin: 0 35px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: flex-start;
+
+      .list {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px -10px;
+
+        .list__item {
+          margin: 0 5px 10px;
+          flex: 0 0 auto;
+
+          .list__item-link {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+
+            &:hover {
+              transform: translateY(-1px);
+            }
+          }
+
+          img {
+            mix-blend-mode: luminosity;
+          }
+        }
+      }
+
+      @media (max-width: $bpMobile) {
+        margin: 0;
+      }
     }
 
     .footer__form {
       margin: 0 35px;
       width: 400px;
+      max-width: 100%;
+
+      @media (max-width: $bpMobile) {
+        margin: 0 0 24px;
+      }
     }
   }
 
@@ -88,6 +146,13 @@
     max-width: 300px;
     margin-right: 35px;
     flex: 0 0 auto;
+
+    @media (max-width: $bpTablet) {
+      width: 100%;
+      max-width: 100%;
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
 
     &:last-child {
       margin-bottom: 0;
@@ -118,11 +183,22 @@
         font-size: 12px;
         color: rgba(255,255,255,.5);
       }
+
+      .-cards {
+        display: flex;
+        align-items: center;
+
+        .image {
+          margin-left: 12px;
+          mix-blend-mode: screen;
+        }
+      }
     }
   }
 
   &__info {
     margin-bottom: 40px;
+    flex: 1 1 auto;
 
     &:last-child {
       margin-bottom: 0;
@@ -131,12 +207,16 @@
     &-wrapper {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -30px -30px;
+      margin: 0 -15px -30px;
     }
 
     &-item {
-      width: calc(33.3333% - 60px);
-      margin: 0 30px 30px;
+      width: calc(33.3333% - 30px);
+      margin: 0 15px 30px;
+
+      @media (max-width: $bpPhone) {
+        width: calc(50% - 30px);
+      }
 
       .item__title {
         padding-bottom: 10px;
@@ -180,9 +260,21 @@
 
   &__contact {
 
+    &-wrapper {
+
+      @media (min-width: 680px) and (max-width: $bpLaptop) {
+        display: flex;
+        margin: 0 -20px -18px;
+      }
+    }
+
     &-item {
       display: flex;
       margin-bottom: 18px;
+
+      @media (min-width: 680px) and (max-width: $bpLaptop) {
+        margin: 0 20px 18px;
+      }
 
       &:last-child {
         margin-bottom: 0;
@@ -197,6 +289,32 @@
       .item__count {
         .link, .text {
           display: block;
+        }
+      }
+
+      .item__image {
+        .text {
+          font-size: 12px;
+          color: rgba(255,255,255,.5);
+          margin-bottom: 10px;
+          display: block;
+        }
+
+        .image-wrapper {
+          display: flex;
+          align-items: center;
+
+          .link {
+            margin-right: 10px;
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &:hover {
+              transform: translateY(-1px);
+            }
+          }
         }
       }
 
@@ -225,11 +343,24 @@
     &-wrapper {
       display: flex;
       margin: 0 -15px -20px;
+
+      @media (max-width: $bpMobile) {
+        display: block;
+        margin: 0;
+      }
     }
   }
 
   &__nav, &__copyright {
     margin: 0 15px 20px;
+
+    @media (max-width: $bpMobile) {
+      margin: 0 0 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
   }
 
   &__nav {

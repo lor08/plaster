@@ -1,16 +1,69 @@
 .aside {
   width: 278px;
 
+  @media (max-width: $bpTablet) {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    transform: translateX(101%);
+    transition: .2s;
+    z-index: 19;
+    overflow-y: auto;
+
+    &.-active {
+      transform: translateX(0);
+    }
+  }
+
+  @media (max-width: $bpPhone) {
+    width: 100%;
+  }
+
+  &__close {
+    width: 18px;
+    display: none;
+    position: absolute;
+    top: 14px;
+    right: 4px;
+    z-index: 2;
+    cursor: pointer;
+
+    @media (max-width: $bpTablet) {
+      display: block;
+    }
+
+    .line {
+      width: 100%;
+      display: block;
+      background: #fff;
+      height: 2px;
+      border-radius: 2px;
+
+      &:nth-child(1) {
+        transform: rotate(45deg) translateY(1px);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg) translateY(-1px);
+      }
+    }
+  }
+
   &__wrapper {
     padding: 0 8px 16px;
     background: $grayColor;
   }
 
   &__title {
-    padding: 40px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100px;
     text-align: center;
     background: url("../img/aside/aside-title.jpg") center center no-repeat;
     background-size: cover;
+    padding: 8px;
 
     .text {
       text-transform: uppercase;
@@ -18,8 +71,11 @@
       font-size: 20px;
       font-weight: 900;
     }
-  }
 
+    @media (max-width: $bpTablet) {
+      padding: 20px 8px 8px 8px;
+    }
+  }
 
   &__menu {
     background: #c2c9cc;
@@ -158,6 +214,174 @@
           }
         }
       }
+    }
+  }
+
+  .aside-line {
+    margin: 8px 0;
+    display: block;
+    border-bottom: 1px #717a7e solid;
+
+    &.-dotted {
+      border-bottom: 1px #717a7e dotted;
+    }
+  }
+
+  .aside__selection {
+    background: #576166;
+    padding: 14px 16px;
+
+
+    .selection__title {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .text {
+        font-weight: 900;
+        color: #ecedee;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+    }
+
+    .selection-wrapper {
+      display: flex;
+      align-items: center;
+      margin: 0 -5px;
+
+      .text {
+        margin: 0 5px;
+        color: #ffffff;
+        white-space: nowrap;
+      }
+
+      .input-number {
+        margin: 0 5px;
+        width: 63px;
+        height: 22px;
+        padding: 5px;
+        border: none;
+        outline: none;
+      }
+    }
+  }
+
+  .aside__collection {
+    background: #576166;
+    padding: 14px 18px;
+
+    &:last-child {
+      min-height: 260px;
+    }
+
+    .collection__title {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .text {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+
+    .collection__input-wrapper {
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px rgba(255,255,255,.5) dotted;
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      .collection__input-title {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .text {
+          font-weight: 500;
+          color: #fff;
+        }
+      }
+      .input__field {
+        margin-bottom: 8px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        .input-checkbox {
+          position: absolute;
+          z-index: -999;
+          opacity: 0;
+          visibility: hidden;
+
+          &:checked + .label {
+            color: #fff;
+
+            &:before {
+              background: url('../img/aside/icon-check.png') center 40% no-repeat;
+              background-size: 12px;
+            }
+          }
+        }
+
+        .label {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          color: #a7acaf;
+          transition: .2s;
+
+          &:before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            border: 1px #a9b4b8 solid;
+            border-radius: 4px;
+            margin-right: 8px;
+            transition: .2s;
+          }
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+
+  &.-catalog {
+
+    .aside__title {
+      justify-content: flex-start;
+      text-align: left;
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 100px;
+        background: url('../img/aside/aside-catalog-title.png') top left no-repeat;
+        background-size: cover;
+      }
+    }
+
+    .aside__menu {
+      padding-bottom: 0;
     }
   }
 }

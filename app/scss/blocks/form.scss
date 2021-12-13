@@ -34,6 +34,14 @@
           font-weight: 700;
           text-transform: uppercase;
         }
+
+        @media (max-width: $bpMobile) {
+          padding: 0 40px;
+        }
+
+        @media (max-width: $bpPhone) {
+          padding: 0 30px;
+        }
       }
     }
 
@@ -129,6 +137,11 @@
     position: relative;
     background: #dee0e3 url('../img/3d/info-image-4.png') 30px 20px no-repeat;
     background-size: 100px;
+
+    @media (max-width: $bpPhone) {
+      padding: 14px 10px 10px 60px;
+      background-position: -20% 20px;
+    }
 
     .form__title {
       margin-left: 8px;
