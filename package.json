@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Gulp Project",
   "main": "index.js",
-  "homepage": "https://github.com/KNSM.github.io/plaster",
+  "homepage": "https://knsm.hithub.io/plaster",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "gh-pages -d public"
@@ -14,7 +14,6 @@
     "browser-sync": "^2.24.4",
     "del": "^3.0.0",
     "gh-pages": "^3.2.3",
-    "gulp": "^3.9.1",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-concat": "^2.6.1",
@@ -22,17 +21,17 @@
     "gulp-html-extend": "^1.1.6",
     "gulp-imagemin": "^4.1.0",
     "gulp-inject": "^5.0.5",
+    "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.2.1",
+    "gulp-uglify-es": "^3.0.0",
     "gulp-uglifyjs": "^0.6.2",
     "imagemin-pngquant": "^5.1.0",
     "main-bower-files": "^2.13.3",
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "gulp-plumber": "^1.2.1",
-    "gulp-uglify": "^3.0.2",
-    "normalize.css": "^8.0.1",
+    "gulp": "^3.9.1",
     "npm": "^6.0.0"
   }
 }

@@ -3,7 +3,7 @@ var gulp = require('gulp'), // Подключаем Gulp
     browserSync = require('browser-sync'), // Подключаем Browser Sync
     extender = require('gulp-html-extend'), // Инклюдим отдельные части кода
     concat = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
-    uglify = require('gulp-uglify'),
+    uglify = uglify = require('gulp-uglify-es').default,
     cssnano = require('gulp-cssnano'), // Подключаем пакет для минификации CSS
     rename = require('gulp-rename'), // Подключаем библиотеку для переименования файлов
     del = require('del'), // Подключаем библиотеку для удаления файлов и папок
@@ -80,9 +80,6 @@ gulp.task('build', ['clean', 'sass', 'js', 'extend'], function () {
     var buildImg = gulp.src('app/img/**/*') // Переносим картинки в продакшен
         .pipe(gulp.dest('public/img'));
 
-    var buildVideo = gulp.src('app/video/**/*') // Переносим картинки в продакшен
-        .pipe(gulp.dest('public/video'));
-
     var buildJs = gulp.src('app/js/**/*.min.js') // Переносим скрипты в продакшен
         .pipe(gulp.dest('public/js'));
 
@@ -90,6 +87,15 @@ gulp.task('build', ['clean', 'sass', 'js', 'extend'], function () {
         .pipe(gulp.dest('public'));
 
     var buildHtml = gulp.src('app/*.html') // Переносим HTML в продакшен
+        .pipe(gulp.dest('public'));
+
+    var buildHtaccess = gulp.src('app/.htaccess') // Переносим htaccess в продакшен
+        .pipe(gulp.dest('public'));
+
+    var buildRobots = gulp.src('app/robots.txt') // Переносим robots.txt в продакшен
+        .pipe(gulp.dest('public'));
+
+    var buildVideo = gulp.src('app/video/') // Переносим robots.txt в продакшен
         .pipe(gulp.dest('public'));
 });
 
