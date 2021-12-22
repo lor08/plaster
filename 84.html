@@ -64,7 +64,7 @@
                         </div>
 
                         <ul class="list">
-                            <li class="list__item"><a href="javascript:;" class="list__item-link">Интернет магазин</a>
+                            <li class="list__item"><a href="javascript:;" class="list__item-link">Интернет-магазин</a>
                             <li class="list__item"><a href="javascript:;" class="list__item-link">О компании</a>
                             </li>
                             <li class="list__item -active"><a href="javascript:;" class="list__item-link">Продукция</a>
@@ -187,7 +187,13 @@
                         </ul>
 
                         <div class="header__control-button">
-                            <a href="javascript:;" class="link link-white-border">Личный кабинет</a>
+                            <a href="javascript:;" class="link link-border-blue">
+                                <span class="border tl"></span>
+                                <span class="border tr"></span>
+                                <span class="border bl"></span>
+                                <span class="border br"></span>
+                                Личный кабинет
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -230,9 +236,9 @@
 <section class="section section-map" id="section-map">
     <div class="container">
         <div class="section__title -gray">
-            <h3 class="h3 text">
+            <h1 class="h1 text">
                 Жидкие обои в Москве и Московской области
-            </h3>
+            </h1>
         </div>
 
         <div class="map-block">
@@ -669,7 +675,7 @@
             <div class="recommend__wrapper">
                 <div class="recommend__title">
                     <p class="text">
-                        Ранее Вы смотрели
+                        МАТЕРИАЛЫ SILK PLASTER
                     </p>
                 </div>
 
@@ -843,7 +849,7 @@
             <div class="recommend__wrapper">
                 <div class="recommend__title">
                     <p class="text">
-                        Рекомендуем
+                        РАНЕЕ ВЫ СМОТРЕЛИ
                     </p>
                 </div>
 
@@ -1015,8 +1021,12 @@
             </div>
 
             <div class="recommend__button">
-                <a href="javascript:;" class="link">
+                <a href="javascript:;" class="link link-border-white">
                     Перейти в Интернет-магазин
+                    <span class="border tl"></span>
+                    <span class="border tr"></span>
+                    <span class="border bl"></span>
+                    <span class="border br"></span>
                 </a>
             </div>
         </div>
@@ -1039,7 +1049,7 @@
                                 <div class="footer__form">
                                     <form action="#" class="form form-footer-mail">
                                         <input type="email" class="input" name="form-footer-mail-email"
-                                               placeholder="Оставьте свой е-мейл">
+                                               placeholder="Оставьте свой е-мейл" data-mask="email">
                                         <button class="button" type="submit">Подписаться на новости</button>
                                     </form>
                                 </div>
@@ -1270,8 +1280,7 @@
 <script src="./js/libs/jquery.fancybox.min.js"></script>
 <script src="./js/libs/fakescroll.min.js"></script>
 <script src="./js/libs/slick.min.js"></script>
-<script src="./js/libs/clipboard.min.js"></script>
-<script src="./js/libs/lazyload.min.js"></script>
+<script src="./js/libs/validator.min.js"></script>
 <script src="./js/main.min.js"></script>
 <!-- end scripts.html-->
 </body>
