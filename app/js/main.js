@@ -11,43 +11,43 @@ $(document).ready(function () {
     });
 
     //main-section-image-slide
-    $(function () {
-        var imageSliderLeft = $('.section-main-image-slider-left'),
-            imageItemLeft = imageSliderLeft.find('.image-item'),
-            imageSliderRight = $('.section-main-image-slider-right'),
-            imageItemRight = imageSliderRight.find('.image-item'),
-            n = 0;
-
-        setInterval(function () {
-            var lengthArr = imageItemLeft.length,
-                currentItem = $(imageItemLeft[n]);
-
-            imageItemLeft.removeClass('-active');
-            currentItem.addClass('-active');
-
-            if (n < lengthArr - 1) {
-                n++
-            } else {
-                n = 0;
-            }
-
-        }, 5000);
-
-        setInterval(function () {
-            var lengthArr = imageItemRight.length,
-                currentItem = $(imageItemRight[n]);
-
-            imageItemRight.removeClass('-active');
-            currentItem.addClass('-active');
-
-            if (n < lengthArr - 1) {
-                n++
-            } else {
-                n = 0;
-            }
-
-        }, 5000);
-    });
+    // $(function () {
+    //     var imageSliderLeft = $('.section-main-image-slider-left'),
+    //         imageItemLeft = imageSliderLeft.find('.image-item'),
+    //         imageSliderRight = $('.section-main-image-slider-right'),
+    //         imageItemRight = imageSliderRight.find('.image-item'),
+    //         n = 0;
+    //
+    //     setInterval(function () {
+    //         var lengthArr = imageItemLeft.length,
+    //             currentItem = $(imageItemLeft[n]);
+    //
+    //         imageItemLeft.removeClass('-active');
+    //         currentItem.addClass('-active');
+    //
+    //         if (n < lengthArr - 1) {
+    //             n++
+    //         } else {
+    //             n = 0;
+    //         }
+    //
+    //     }, 5000);
+    //
+    //     setInterval(function () {
+    //         var lengthArr = imageItemRight.length,
+    //             currentItem = $(imageItemRight[n]);
+    //
+    //         imageItemRight.removeClass('-active');
+    //         currentItem.addClass('-active');
+    //
+    //         if (n < lengthArr - 1) {
+    //             n++
+    //         } else {
+    //             n = 0;
+    //         }
+    //
+    //     }, 5000);
+    // });
 
     //input-mask
     $('.phoneMask').mask('+7 (999) 999-99-99');
@@ -360,8 +360,8 @@ $(document).ready(function () {
                             breakpoint: 480,
                             settings: {
                                 slidesToShow: 1,
-                                arrows: false,
-                                dots: true,
+                                arrows: true,
+                                nextArrow: $(this).parent().find('.section__title .slider-button-next'),
                                 adaptiveHeight: true
                             }
                         }
@@ -477,7 +477,14 @@ $(document).ready(function () {
                             settings: {
                                 slidesToShow: 1,
                             }
-                        }
+                        },
+                        {
+                            breakpoint: 480,
+                            settings: {
+                                slidesToShow: 1,
+                                nextArrow: $(this).parent().find('.slider-button-next'),
+                            }
+                        },
                     ]
                 });
             }
@@ -502,7 +509,7 @@ $(document).ready(function () {
                             settings: {
                                 slidesToShow: 1,
                                 slidesToScroll: 1,
-                                arrows: false,
+                                arrows: true,
                             }
                         }
                     ]
@@ -744,7 +751,20 @@ $(document).ready(function () {
     //header-menu
     $(function () {
         var headerMenu = $('.header .header__nav'),
-            headerOpener = $('.header .header__menu');
+            headerOpener = $('.header .header__menu'),
+            headerContent = $('.header .header__content');
+
+        if ($(window).width() <= 480) {
+            function headerContentHeight() {
+                headerContent.css('height', ($(window).width() / 4.444444) + 'px');
+            }
+
+            headerContentHeight();
+
+            $(window).on('resize', function () {
+                headerContentHeight();
+            });
+        }
 
         headerOpener.on('click', function () {
             if ($(this).hasClass('-active')) {

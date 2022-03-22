@@ -198,6 +198,15 @@
         }
       }
 
+      .header__caption {
+        margin-bottom: 24px;
+
+        &-text {
+          font-weight: 700;
+          opacity: .8;
+        }
+      }
+
       @media (max-width: $bpLaptop) {
         position: absolute;
         width: 360px;
@@ -506,6 +515,60 @@
 
         @media (max-width: $bpMobile) {
           display: block;
+        }
+      }
+
+      .link-text {
+        position: absolute;
+        font-size: 18px;
+        color: #4e595e;
+        font-weight: 700;
+        bottom: 20px;
+        right: 170px;
+        transform: rotate(20deg);
+        line-height: 1.1;
+
+        @media (max-width: $bpLaptop) {
+          font-size: 16px;
+          right: 130px;
+        }
+
+        @media (max-width: $bpTablet) {
+          display: none;
+        }
+      }
+
+      .header__menu {
+        @media (min-width: $bpPhone + 1) {
+          display: none;
+        }
+
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 52px;
+        cursor: pointer;
+
+        .line {
+          height: 6px;
+          border-radius: 4px;
+          margin-bottom: 8px;
+          background: #4e595e;
+          display: block;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      @media (max-width: $bpPhone) {
+        width: 100%;
+        left: 0;
+        transform: none;
+
+        .image {
+          width: 100%;
         }
       }
     }

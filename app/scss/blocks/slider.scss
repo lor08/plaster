@@ -83,14 +83,6 @@
           flex: 0 0 auto;
           width: 140px;
 
-          @media (max-width: $bpTablet) {
-            width: 100px;
-          }
-
-          @media (max-width: 414px) {
-            width: 140px;
-          }
-
           .image-block {
             padding-bottom: 20px;
           }
@@ -111,6 +103,14 @@
               min-width: 100%;
               max-width: 10000%;
             }
+          }
+
+          @media (max-width: $bpTablet) {
+            width: 100px;
+          }
+
+          @media (max-width: $bpPhone) {
+            display: none;
           }
         }
 
@@ -192,6 +192,42 @@
             }
           }
         }
+
+        &__text {
+          .image-mobile-wrapper {
+            @media (min-width: $bpPhone + 1) {
+              display: none;
+            }
+            display: inline;
+            width: 145px;
+            height: 145px;
+            overflow: hidden;
+            border-radius: 50%;
+            position: relative;
+            flex: 0 0 auto;
+
+            .image {
+              position: absolute;
+              height: 100%;
+              min-width: 100%;
+              max-width: 200%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+
+          @media (max-width: $bpPhone) {
+            display: flex;
+            .text {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      @media (max-width: $bpPhone) {
+        padding: 0;
       }
     }
 
@@ -228,16 +264,28 @@
         background: url("../img/main/trust/arrow-next.png") center center no-repeat;
         background-size: cover;
       }
+
+      @media (max-width: $bpPhone) {
+        display: none;
+      }
     }
   }
 
   &.slider-demo {
     margin: 0 -5px;
 
+    @media (max-width: $bpPhone) {
+      margin: 0;
+    }
+
     .slider__wrapper {
       .slider__item {
         margin: 0 5px;
         position: relative;
+
+        @media (max-width: $bpPhone) {
+          margin: 0;
+        }
 
         &:nth-child(2n + 1) {
           .slider__image-logo {
@@ -253,6 +301,20 @@
             align-items: flex-start;
             padding-right: 55px;
             padding-left: 15px;
+
+            @media (max-width: $bpPhone) {
+              width: 62.5%;
+              height: 37.5%;
+              top: 0;
+              left: 0;
+              padding: 12px;
+              background: linear-gradient(159deg, #ecedee 50%, transparent 50%, transparent 100%);
+              display: block;
+
+              .image {
+                width: 60px;
+              }
+            }
           }
         }
 
@@ -269,6 +331,20 @@
             align-items: flex-start;
             padding-left: 55px;
             padding-right: 15px;
+
+            @media (max-width: $bpPhone) {
+              width: 62.5%;
+              height: 37.5%;
+              top: 0;
+              left: 0;
+              padding: 12px;
+              background: linear-gradient(159deg, #ecedee 50%, transparent 50%, transparent 100%);
+              display: block;
+
+              .image {
+                width: 60px;
+              }
+            }
           }
         }
 
@@ -276,11 +352,46 @@
           padding-top: 56.856%;
           background-size: cover;
           background-position: center center;
+
+          @media (max-width: $bpPhone) {
+            padding-top: 65%;
+          }
         }
 
         .slider__image-logo {
           padding-top: 30px;
         }
+      }
+
+      .slick-prev {
+        position: absolute;
+        width: 21px;
+        height: 40px;
+        background: url('../img/icons/icon-arrow-white-left.png');
+        background-size: cover;
+        top: 50%;
+        left: 20px;
+        transform: translateY(-50%);
+        font-size: 0;
+        border: none;
+        outline: none;
+        z-index: 1;
+        display: none !important;
+      }
+
+      .slick-next {
+        position: absolute;
+        width: 21px;
+        height: 40px;
+        background: url('../img/icons/icon-arrow-white-right.png');
+        background-size: cover;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        font-size: 0;
+        border: none;
+        outline: none;
+        z-index: 1;
       }
     }
 
@@ -292,7 +403,7 @@
       position: relative;
 
       @media (max-width: $bpPhone) {
-        padding: 20px 25px;
+        padding: 20px 12px;
       }
 
       .slider-arrow-prev {
@@ -361,6 +472,11 @@
                 bottom: 0;
                 left: 0;
                 background: url("../img/border-blue.png");
+
+                @media (max-width: $bpPhone) {
+                  width: 70px;
+                  height: 3px;
+                }
               }
             }
           }
@@ -375,6 +491,11 @@
                 bottom: 0;
                 left: 0;
                 background: url("../img/border-red.png");
+
+                @media (max-width: $bpPhone) {
+                  width: 70px;
+                  height: 3px;
+                }
               }
             }
           }
@@ -387,6 +508,13 @@
             .text {
               color: #20286d;
               font-size: 30px;
+            }
+
+            @media (max-width: $bpPhone) {
+              padding-bottom: 3px;
+              .text {
+                font-size: 23px;
+              }
             }
           }
 
@@ -426,7 +554,7 @@
     padding: 0 60px;
 
     @media (max-width: $bpPhone) {
-      padding: 0 15px;
+      padding: 0;
     }
 
     .slider__wrapper {
@@ -499,6 +627,10 @@
 
         .item__image {
           margin-bottom: 35px;
+
+          @media (max-width: $bpPhone) {
+            margin-bottom: 18px;
+          }
         }
 
         .item__content {
@@ -527,12 +659,20 @@
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
         }
 
+        @media (max-width: $bpPhone) {
+          margin-bottom: 16px;
+        }
       }
 
       .item__content {
         width: 320px;
         max-width: 100%;
         margin-left: 30px;
+
+        @media (max-width: $bpPhone) {
+          width: 100%;
+          padding: 0 12px;
+        }
       }
 
       .item__title {

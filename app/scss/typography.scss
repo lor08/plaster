@@ -15,6 +15,10 @@ main {
   @media (max-width: 1440px) {
     min-height: calc(100vh - 168px);
   }
+
+  @media (max-width: $bpPhone) {
+    min-height: auto;
+  }
 }
 
 h1, h2, h3, h4, h5, h6,
