@@ -53,6 +53,11 @@
   &__wrapper {
     padding: 0 8px 16px;
     background: $grayColor;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__title {
@@ -102,6 +107,24 @@
 
       .text {
         color: #ecedee;
+      }
+
+      &.-active {
+        .link {
+          position: relative;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 7px;
+            height: 12px;
+            transform: translate(-150%, -50%);
+            background: url("../img/icons/aside-arrow-right-white.png") center center no-repeat;
+            background-size: contain;
+          }
+        }
       }
     }
 
@@ -382,6 +405,97 @@
 
     .aside__menu {
       padding-bottom: 0;
+    }
+  }
+
+  .aside__bottom-list {
+
+    @media (max-width: $bpTablet) {
+      background: #fff;
+    }
+
+    .list-big-links {
+
+      .list__item {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      .list__link {
+        display: block;
+        padding: 14px 20px;
+
+        .link-text {
+          color: #20286d;
+          font-size: 25px;
+          position: relative;
+          transition: .2s;
+
+          &:before {
+            content: '';
+            position: absolute;
+            width: 92px;
+            height: 4px;
+            left: 0;
+            bottom: 0;
+            transform: translateY(calc(100% + 5px));
+          }
+        }
+
+        .border {
+          opacity: 0;
+        }
+
+        &:hover {
+
+          .link-text {
+            color: $redColor;
+          }
+
+          .border {
+            opacity: 1;
+          }
+        }
+
+        &.link-border-blue {
+          .link-text {
+            &:before {
+              background: url('../img/aside/border-blue.jpg');
+              background-size: cover;
+            }
+          }
+        }
+
+        &.link-border-light-blue {
+          .link-text {
+            &:before {
+              background: url('../img/aside/border-light-blue.jpg');
+              background-size: cover;
+            }
+          }
+        }
+
+        &.link-border-red {
+          .link-text {
+            &:before {
+              background: url('../img/aside/border-red.jpg');
+              background-size: cover;
+            }
+          }
+        }
+
+        &.link-border-light-red {
+          .link-text {
+            &:before {
+              background: url('../img/aside/border-light-red.jpg');
+              background-size: cover;
+            }
+          }
+        }
+      }
     }
   }
 }

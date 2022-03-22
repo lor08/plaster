@@ -203,6 +203,15 @@
         font-weight: 700;
         font-size: 12px;
         box-shadow: 2px 2px 2px 0 rgba(78,89,94,.3);
+        transition: .2s;
+
+        &:hover {
+          background: #E83F3B;
+        }
+
+        &:active {
+          background: #972C28;
+        }
       }
     }
   }
@@ -229,7 +238,7 @@
       border: none;
       outline: none;
       font-size: 14px;
-      color: #a9b4b8;
+      color: #fff;
 
       &::placeholder {
         font-size: 14px;
@@ -246,6 +255,11 @@
       font-weight: 700;
       height: 27px;
       width: 167px;
+      transition: .2s;
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }

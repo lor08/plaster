@@ -1,0 +1,63 @@
+<div class="modal modal-basket" id="modal-basket">
+    <div class="modal__wrapper">
+        <div class="modal__header">
+            <div class="modal__close">
+                <img src="./img/icons/icon-close.png" alt="" class="modal__close-image">
+            </div>
+            <div class="modal__header-wrapper">
+                <div class="modal__title">
+                    <p class="modal__title-text">
+                        купить в 1 клик
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="modal__content">
+            <div class="modal__content-wrapper">
+                <form class="modal__form form form-buy-one-click">
+                    <div class="form__input-field-wrapper">
+                        <div class="form__input-field form__input-field--big form__input-field--bottom-line">
+                            <input type="text" data-mask="name" class="form__input" name="form-buy-one-click-fio"
+                                   placeholder="Ф.И.О.">
+                        </div>
+                        <div class="form__input-field form__input-field--bottom-line">
+                            <input type="text" class="form__input phoneMask" placeholder="Телефон"
+                                   name="form-buy-one-click-number">
+                        </div>
+                        <div class="form__input-field form__input-field--big form__input-field--bottom-line">
+                            <input type="text" class="form__input" placeholder="Город" name="form-buy-one-click-city">
+                        </div>
+                        <div class="form__input-field">
+                            <a href="javascript:;" class="form__input-link link-delivery-cost">
+                                Стоимость достаки
+                            </a>
+                        </div>
+                        <div class="form__input-field form__input-field--big">
+                            <label for="form-buy-one-click-comment" class="label label-textarea">
+                                Комментарий
+                            </label>
+                            <textarea id="form-buy-one-click-comment" name="form-buy-one-click-comment"
+                                      class="form__input-textarea"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form__agreement-field">
+                        <input type="checkbox" class="form__input-checkbox" id="form-buy-one-click-agreement" checked>
+                        <label for="form-buy-one-click-agreement" class="form__input-checkbox-label">
+                            <p class="text">
+                                Я согласен на <a href="javascript:;" class="link link-text-primary">обработку
+                                персональных данных</a>
+                            </p>
+                        </label>
+                    </div>
+
+                    <div class="form__button">
+                        <button class="button link link-border" data-border-width="1" data-border-length="10" data-border-offset="2" data-border-color="#fff">
+                            Отправить
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

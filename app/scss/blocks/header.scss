@@ -64,12 +64,20 @@
           height: 200px;
           right: auto;
           width: 323px;
-          box-shadow: 0 0 4px 0 rgba(0,0,0,.1);
+          box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
         }
       }
     }
 
     .header__nav {
+
+      .-laptop {
+        display: none;
+
+        @media (max-width: $bpLaptop) {
+          display: block;
+        }
+      }
 
       .-tablet {
         display: none;
@@ -262,6 +270,7 @@
       &.-active {
         .line {
           margin-bottom: 0;
+
           &:nth-child(1) {
             transform: rotate(-45deg) translateY(1px);
           }
@@ -420,7 +429,7 @@
     &-list {
       display: flex;
       padding: 6px;
-      background: rgba(255,255,255,.7);
+      background: rgba(255, 255, 255, .7);
       margin: 0 2px 5px;
     }
 
@@ -460,8 +469,7 @@
         padding: 0 12px;
 
         &.link-white-border {
-          background: url('../img/input-white-border-bg.jpg');
-          background-size: cover;
+          background: #fff;
           width: 174px;
           height: 42px;
           color: #282578;
@@ -474,7 +482,7 @@
 
   &.-header-main {
     position: relative;
-    z-index: 1;
+    z-index: 19;
 
     .container {
       max-width: 1470px;
@@ -485,7 +493,29 @@
       top: 0;
       left: 40%;
       z-index: 3;
-      transform: translate(-100%, -41%) rotate(-22deg);
+      transform: translate(-100%, -44%) rotate(-20deg);
+
+      .image-desktop {
+        @media (max-width: $bpMobile) {
+          display: none;
+        }
+      }
+
+      .image-mobile {
+        display: none;
+
+        @media (max-width: $bpMobile) {
+          display: block;
+        }
+      }
+    }
+
+    .header__content {
+      background: linear-gradient(145deg, #1e292e 30.3%, #4e595e 40%, #4e595e 100%);
+
+      @media (max-width: $bpPhone) {
+        height: 34px;
+      }
     }
 
     .header__content-wrapper {
@@ -497,6 +527,23 @@
 
       @media (max-width: $bpLaptop) {
         margin: 0;
+        height: calc(100vh - 60px);
+        padding: 12px 20px;
+
+        .list {
+          margin: 0 -20px 24px;
+        }
+      }
+
+      @media (max-width: $bpPhone) {
+        height: calc(100vh - 34px);
+        padding: 40px 20px 20px;
+      }
+    }
+
+    .header__search {
+      @media (max-width: $bpLaptop) {
+        display: none;
       }
     }
 
@@ -505,7 +552,7 @@
     }
 
     .header__bottom {
-      background: rgba(206,206,207, .8);
+      background: rgba(206, 206, 207, .8);
 
       .header__control-list {
         background: #fff;

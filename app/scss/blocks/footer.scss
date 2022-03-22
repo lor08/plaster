@@ -78,6 +78,10 @@
       &.item-contacts {
         max-width: 210px;
         flex: 0 0 auto;
+
+        @media (max-width: $bpLaptop) {
+          max-width: 100%;
+        }
       }
     }
   }
@@ -262,7 +266,7 @@
 
     &-wrapper {
 
-      @media (min-width: 680px) and (max-width: $bpLaptop) {
+      @media (min-width: $bpMobile) and (max-width: $bpLaptop) {
         display: flex;
         margin: 0 -20px -18px;
       }
@@ -272,7 +276,7 @@
       display: flex;
       margin-bottom: 18px;
 
-      @media (min-width: 680px) and (max-width: $bpLaptop) {
+      @media (min-width: $bpMobile) and (max-width: $bpLaptop) {
         margin: 0 20px 18px;
       }
 
@@ -378,6 +382,11 @@
           font-size: 14px;
           color: rgba(255,255,255,.5);
           font-weight: 700;
+          transition: .2s;
+
+          &:hover {
+            color: #fff;
+          }
         }
       }
     }
