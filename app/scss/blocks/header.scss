@@ -505,7 +505,7 @@
       transform: translate(-100%, -44%) rotate(-20deg);
 
       .image-desktop {
-        @media (max-width: $bpMobile) {
+        @media (max-width: $bpPhone) {
           display: none;
         }
       }
@@ -513,7 +513,7 @@
       .image-mobile {
         display: none;
 
-        @media (max-width: $bpMobile) {
+        @media (max-width: $bpPhone) {
           display: block;
         }
       }
